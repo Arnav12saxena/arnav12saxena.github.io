@@ -1,3 +1,6 @@
+// Disable scroll while loading
+document.body.classList.add("loading");
+
 // Mobile nav toggle
 const navToggle = document.getElementById("navToggle");
 const navList = document.getElementById("navList");
@@ -136,3 +139,8 @@ function validateContactForm(e) {
 
   return false;
 }
+
+window.addEventListener("load", () => {
+  // Re-enable scroll when loading is done
+  document.body.classList.remove("loading");
+});
