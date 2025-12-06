@@ -781,19 +781,24 @@ body.theme-light .pill-soft {
 }
 
 .project-footer {
+  margin-top: 8px;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  font-size: 10px;
+}
+
+.project-footer span {
+  font-family: inherit;
+  font-size: 10px;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .project-link {
-  text-decoration: none;
+  font-family: inherit;
   font-size: 11px;
-  color: var(--accent-strong);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+  white-space: nowrap;
 }
 
 /* Achievements */
@@ -1148,9 +1153,9 @@ body.theme-light .hero-highlight {
   max-width: 160px;
 }
 
-header, nav {
-  position: sticky !important;
+header {
+  position: sticky;
   top: 0;
-  z-index: 9999 !important;
+  z-index: 50;
+  pointer-events: auto;
 }
-
