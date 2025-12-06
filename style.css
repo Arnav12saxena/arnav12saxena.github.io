@@ -1,3 +1,16 @@
+/* Absolute FIX — allow clicks everywhere on real content */
+.wrapper, section, .card, article, .projects-grid, .blog-grid, .blog-card, .contact-layout {
+  position: relative;
+  z-index: 5;
+  pointer-events: auto !important;
+}
+
+/* Background layers must NEVER capture clicks */
+#bgParticles, .noise-overlay, .grid-bg {
+  pointer-events: none !important;
+  z-index: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1122,3 +1135,4 @@ body.theme-light .contact-layout,
 body.theme-light .meta-row {
   color: #334155 !important;
 }
+
