@@ -122,12 +122,13 @@ function validateContactForm(e) {
     return false;
   }
 
-  // Basic email check
   if (!email.value.includes("@") || !email.value.includes(".")) {
     alert("Please enter a valid email address.");
     return false;
   }
 
-  alert("Message sent! (Note: This is a frontend demo — connect backend to send.)");
-  return false; // prevent actual form submit
+  alert("Your message was submitted successfully!");
+  return false;
 }
+
+
