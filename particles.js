@@ -31,14 +31,19 @@ function initParticles(canvasId) {
   function draw() {
     ctx.clearRect(0, 0, width, height);
 
-    // Soft gradient
-    const grad = ctx.createRadialGradient(width * 0.5, height * 0.1, 0, width * 0.5, height * 0.1, width * 0.8);
+    const grad = ctx.createRadialGradient(
+      width * 0.5,
+      height * 0.1,
+      0,
+      width * 0.5,
+      height * 0.1,
+      width * 0.8
+    );
     grad.addColorStop(0, "rgba(79, 209, 255, 0.12)");
     grad.addColorStop(1, "rgba(5, 8, 22, 0)");
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, width, height);
 
-    // Draw lines
     ctx.lineWidth = 0.5;
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
@@ -58,7 +63,6 @@ function initParticles(canvasId) {
       }
     }
 
-    // Draw particles
     for (const p of particles) {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -89,5 +93,4 @@ function initParticles(canvasId) {
   loop();
 }
 
-// Export style usage for other pages
 window.initParticles = initParticles;
