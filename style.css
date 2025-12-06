@@ -1099,3 +1099,26 @@ footer span strong {
     gap: 4px;
   }
 }
+
+/* Fix light mode readability for all text inside cards */
+body.theme-light .card,
+body.theme-light .blog-card,
+body.theme-light .project-card,
+body.theme-light .achievement-card,
+body.theme-light .resume-mini-frame,
+body.theme-light .skills-row-inner,
+body.theme-light .contact-form,
+body.theme-light input,
+body.theme-light textarea {
+  color: #020617 !important;
+}
+
+/* Fix muted text in light mode */
+body.theme-light .text-muted,
+body.theme-light .project-desc,
+body.theme-light .blog-excerpt,
+body.theme-light .achievement-meta,
+body.theme-light .contact-layout,
+body.theme-light .meta-row {
+  color: #334155 !important;
+}
