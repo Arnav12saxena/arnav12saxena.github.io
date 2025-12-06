@@ -128,7 +128,11 @@ function validateContactForm(e) {
   }
 
   alert("Your message was submitted successfully!");
+
+  // Clear fields
+  name.value = "";
+  email.value = "";
+  msg.value = "";
+
   return false;
 }
-
-
