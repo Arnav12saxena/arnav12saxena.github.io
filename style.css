@@ -697,11 +697,11 @@ body.theme-light .skill-pill {
 }
 
 .skills-row-left .skills-row-inner {
-  animation: marquee-left 45s linear infinite;
+  animation: marquee-left 90s linear infinite;
 }
 
 .skills-row-right .skills-row-inner {
-  animation: marquee-right 45s linear infinite;
+  animation: marquee-right 90s linear infinite;
 }
 
 /* Pause row on hover only for that row */
@@ -1153,3 +1153,4 @@ header, nav {
   top: 0;
   z-index: 9999 !important;
 }
+
