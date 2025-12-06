@@ -111,3 +111,23 @@ window.addEventListener("load", () => {
   assignRandomTilt();
   setActiveLink();
 });
+
+function validateContactForm(e) {
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const msg = document.getElementById("message");
+
+  if (!name.value.trim() || !email.value.trim() || !msg.value.trim()) {
+    alert("Please fill out all fields before sending.");
+    return false;
+  }
+
+  // Basic email check
+  if (!email.value.includes("@") || !email.value.includes(".")) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
+  alert("Message sent! (Note: This is a frontend demo — connect backend to send.)");
+  return false; // prevent actual form submit
+}
