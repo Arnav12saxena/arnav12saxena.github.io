@@ -785,7 +785,7 @@ body.theme-light .pill-soft {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .project-link {
@@ -1155,5 +1155,6 @@ header {
   z-index: 50;
   pointer-events: auto;
 }
+
 
 
