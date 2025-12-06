@@ -31,11 +31,11 @@ body.theme-light {
   --accent-strong: #0ea5e9;
   --text-main: #020617;
   --text-muted: #4b5563;
-  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-bg: rgba(255, 255, 255, 0.85);
   --card-border: rgba(148, 163, 184, 0.5);
-  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.2);
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
   --nav-bg: linear-gradient(to bottom, rgba(249, 250, 251, 0.96), rgba(249, 250, 251, 0.8), transparent);
-  --section-card-bg: rgba(255, 255, 255, 0.9);
+  --section-card-bg: rgba(255, 255, 255, 0.92);
 }
 
 body {
@@ -52,6 +52,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: 0;
+  pointer-events: none;
 }
 
 /* Grain + grid */
@@ -75,12 +76,13 @@ body {
   mask-image: radial-gradient(circle at top, black 0, transparent 70%);
   -webkit-mask-image: radial-gradient(circle at top, black 0, transparent 70%);
   opacity: 0.3;
-  z-index: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .wrapper {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   max-width: 1080px;
   margin: 0 auto;
   padding: 18px 18px 48px;
@@ -91,7 +93,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 5;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   background: var(--nav-bg);
@@ -125,6 +127,10 @@ header {
   justify-content: center;
   font-weight: 700;
   font-size: 16px;
+}
+
+body.theme-light .logo-badge {
+  background: radial-gradient(circle at 30% 0, rgba(129, 140, 248, 0.95), transparent 50%), #e5e7eb;
 }
 
 .logo-text-main {
@@ -162,10 +168,9 @@ nav a.active {
   background: rgba(15, 23, 42, 0.9);
 }
 
-/* Dark theme tweak for light mode */
 body.theme-light nav a:hover,
 body.theme-light nav a.active {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 /* Theme toggle button */
@@ -211,10 +216,6 @@ body.theme-light .theme-icon-light {
 
 /* Hero */
 
-main {
-  margin-top: 24px;
-}
-
 section {
   margin-bottom: 56px;
 }
@@ -237,6 +238,10 @@ section {
   font-size: 11px;
   color: var(--text-muted);
   margin-bottom: 14px;
+}
+
+body.theme-light .pill {
+  background: linear-gradient(120deg, #e5e7eb, #bfdbfe);
 }
 
 .pill-dot {
@@ -296,6 +301,10 @@ section {
   gap: 6px;
 }
 
+body.theme-light .hero-badge {
+  background: rgba(255, 255, 255, 0.98);
+}
+
 .hero-badge span {
   font-size: 9px;
   padding: 2px 6px;
@@ -312,6 +321,8 @@ section {
 }
 
 .btn {
+  position: relative;
+  z-index: 4;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -343,9 +354,17 @@ section {
   color: var(--text-main);
 }
 
+body.theme-light .btn-ghost {
+  background: rgba(255, 255, 255, 0.98);
+}
+
 .btn-ghost:hover {
   border-color: var(--accent-soft);
   background: rgba(15, 23, 42, 0.96);
+}
+
+body.theme-light .btn-ghost:hover {
+  background: #f1f5f9;
 }
 
 .btn-secondary {
@@ -354,9 +373,17 @@ section {
   color: var(--accent-strong);
 }
 
+body.theme-light .btn-secondary {
+  background: rgba(255, 255, 255, 0.98);
+}
+
 .btn-secondary:hover {
   border-color: rgba(79, 209, 255, 0.65);
   background: rgba(15, 23, 42, 0.96);
+}
+
+body.theme-light .btn-secondary:hover {
+  background: #e5e7eb;
 }
 
 .meta-row {
@@ -390,6 +417,10 @@ section {
   overflow: hidden;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+}
+
+body.theme-light .hero-card {
+  background: radial-gradient(circle at top, rgba(129, 140, 248, 0.25), transparent 55%), rgba(255, 255, 255, 0.98);
 }
 
 .hero-card::before {
@@ -455,6 +486,10 @@ section {
   background: rgba(15, 23, 42, 0.92);
 }
 
+body.theme-light .chip {
+  background: rgba(248, 250, 252, 0.98);
+}
+
 .hero-kpi-row {
   margin-top: 12px;
   display: flex;
@@ -469,6 +504,10 @@ section {
   border-radius: 12px;
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+body.theme-light .kpi {
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .kpi strong {
@@ -604,11 +643,26 @@ section {
 
 .skills-row-inner {
   display: inline-flex;
-  gap: 12px;
+  gap: 10px;
   will-change: transform;
+  white-space: nowrap;
 }
 
-/* Scroll animations */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.9);
+  font-size: 11px;
+  min-width: 120px;
+}
+
+body.theme-light .skill-pill {
+  background: rgba(255, 255, 255, 0.98);
+}
 
 @keyframes marquee-left {
   0% {
@@ -637,49 +691,8 @@ section {
 }
 
 /* Pause row on hover only for that row */
-
 .skills-row:hover .skills-row-inner {
   animation-play-state: paused;
-}
-
-.skill-card {
-  border-radius: var(--radius-lg);
-  padding: 10px 10px 9px;
-  border: 1px solid rgba(148, 163, 184, 0.45);
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75));
-  min-width: 210px;
-}
-
-body.theme-light .skill-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
-}
-
-.skill-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6px;
-}
-
-.skill-card-title {
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.skill-chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  font-size: 11px;
-  color: var(--text-muted);
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: var(--accent-strong);
-  box-shadow: 0 0 14px rgba(79, 209, 255, 0.75);
 }
 
 .skills-note {
@@ -824,7 +837,7 @@ body.theme-light .achievement-card {
 }
 
 body.theme-light .blog-card {
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .blog-tag {
@@ -944,6 +957,8 @@ body.theme-light .resume-mini-frame {
 
 input,
 textarea {
+  position: relative;
+  z-index: 4;
   border-radius: 12px;
   border: 1px solid rgba(148, 163, 184, 0.55);
   background: rgba(15, 23, 42, 0.96);
@@ -996,7 +1011,7 @@ footer span strong {
   transform: translateY(0);
 }
 
-/* Tilt + zoom cards (skills & projects & blog & achievements etc) */
+/* Tilt + zoom cards (projects, blogs, resume card) */
 
 .tilt-card {
   transition: transform var(--transition-slow), box-shadow var(--transition-slow);
@@ -1013,7 +1028,7 @@ footer span strong {
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.85);
 }
 
-/* Fallback if JS fails to set data-tilt */
+/* Fallback if JS fails */
 .tilt-card:hover:not([data-tilt]) {
   transform: translateY(-4px) scale(1.03);
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.85);
@@ -1057,6 +1072,7 @@ footer span strong {
     background: rgba(15, 23, 42, 0.97);
     box-shadow: var(--shadow-soft);
     display: none;
+    z-index: 10;
   }
 
   body.theme-light nav ul {
@@ -1083,3 +1099,4 @@ footer span strong {
     gap: 4px;
   }
 }
+
