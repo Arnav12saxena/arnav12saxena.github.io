@@ -1181,3 +1181,33 @@ body.theme-light .linkedin-badge-wrapper {
 .linkedin-badge-wrapper iframe {
   width: 100% !important;
 }
+
+/* Remove unwanted LinkedIn auto-generated link above the badge */
+.linkedin-badge-wrapper .badge-base__link {
+  display: none !important;
+}
+
+/* Hide LinkedIn badge hyperlink above the box */
+.linkedin-badge-wrapper .badge-base__link {
+  display: none !important;
+}
+
+/* Default state (dark mode enabled first) */
+.badge-light {
+  display: none;
+}
+
+/* Show correct badge depending on theme */
+body.theme-light .badge-dark {
+  display: none;
+}
+body.theme-light .badge-light {
+  display: block;
+}
+
+body.theme-dark .badge-dark {
+  display: block;
+}
+body.theme-dark .badge-light {
+  display: none;
+}
