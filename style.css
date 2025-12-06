@@ -1,14 +1,15 @@
-/* Absolute FIX — allow clicks everywhere on real content */
-.wrapper, section, .card, article, .projects-grid, .blog-grid, .blog-card, .contact-layout {
-  position: relative;
-  z-index: 5;
-  pointer-events: auto !important;
-}
-
-/* Background layers must NEVER capture clicks */
-#bgParticles, .noise-overlay, .grid-bg {
+/* Force background layers behind content */
+#bgParticles,
+.noise-overlay,
+.grid-bg {
   pointer-events: none !important;
-  z-index: 1;
+  z-index: 0 !important;
+}
+/* Make ALL real content clickable */
+.wrapper, section, .card, article, .blog-card, .projects-grid, a, button {
+  position: relative;
+  z-index: 5 !important;
+  pointer-events: auto !important;
 }
 
 * {
@@ -1136,3 +1137,14 @@ body.theme-light .meta-row {
   color: #334155 !important;
 }
 
+/* Fix hero highlight text visibility in light mode */
+body.theme-light .hero-highlight {
+  background: none !important;
+  color: #0f172a !important;
+  font-weight: 700;
+}
+
+.skills-row-inner .skill-card {
+  min-width: 160px;
+  max-width: 160px;
+}
