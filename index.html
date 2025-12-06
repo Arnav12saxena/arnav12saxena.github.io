@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arnav Saxena - AI & XR Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Arnav Saxena - AI/ML, Computer Vision, XR/VR and Robotics Developer." />
+
+  <!-- Favicon (no extra file needed, inline SVG) -->
+  <link rel="icon" type="image/svg+xml"
+        href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="%234fd1ff" offset="0"/><stop stop-color="%237c5cff" offset="1"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="%23050816"/><circle cx="32" cy="32" r="20" fill="url(%23g)"/><text x="32" y="38" text-anchor="middle" font-size="22" fill="%23020816" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif">A</text></svg>' />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="loading.css" />
+</head>
+<body class="theme-dark">
+  <!-- Loading screen -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-inner">
+      <div class="loader-orb"></div>
+      <div class="loader-text">Warming up AI systems…</div>
+    </div>
+  </div>
+
+  <!-- Particle background -->
+  <canvas id="bgParticles"></canvas>
+
+  <div class="grid-bg"></div>
+  <div class="noise-overlay"></div>
+
+  <header>
+    <div class="nav-bar">
+      <div class="logo">
+        <div class="logo-badge">A</div>
+        <div>
+          <div class="logo-text-main">Arnav Saxena</div>
+          <div class="logo-text-sub">AI / CV / XR / Robotics</div>
+        </div>
+      </div>
+
+      <button class="nav-mobile-toggle" id="navToggle">Menu</button>
+
+      <nav>
+        <ul id="navList">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="theme-icon theme-icon-dark">🌙</span>
+        <span class="theme-icon theme-icon-light">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <!-- Hero -->
+    <section id="home" class="hero reveal">
+      <div>
+        <div class="pill">
+          <div class="pill-dot">◎</div>
+          Open to AI/ML, CV, XR and Robotics internships
+        </div>
+        <h1 class="hero-title">
+          Hi, I am <span class="hero-highlight">Arnav Saxena</span>
+        </h1>
+        <div class="hero-tagline">
+          AI/ML & Computer Vision Developer | XR/VR | Robotics
+        </div>
+        <p class="hero-text">
+          I build end-to-end applied AI systems: from computer vision models and intelligent agents
+          to XR experiences and robotics prototypes. I like taking ideas from notebook to hardware
+          and making them work in the real world.
+        </p>
+
+        <div class="hero-badges">
+          <div class="hero-badge">
+            🏆 Kaggle 1st Place
+            <span>Horse Survival</span>
+          </div>
+          <div class="hero-badge">
+            🥇 XR Winner
+            <span>Jio Tesseract</span>
+          </div>
+          <div class="hero-badge">
+            🎓 NVIDIA DLI
+            <span>Computer Vision</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="https://drive.google.com/file/d/1B2PXQ4uVKDv4XlHuxRXyEaxoWZExL_yU/view?usp=drive_link"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary">
+            ⬇ Download Resume
+          </a>
+          <a href="https://github.com/arnav12saxena"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-ghost">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/arnav-saxena-39113a3a0"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-secondary">
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="meta-row">
+          <div>
+            <div class="meta-label">Focus</div>
+            Applied AI, CV, XR, Robotics
+          </div>
+          <div>
+            <div class="meta-label">Currently</div>
+            B.Tech AI in Agriculture · Building real world projects
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card tilt-card">
+          <div class="hero-glow-orb"></div>
+          <div class="hero-card-inner">
+            <div class="profile-ring">
+              <div class="profile-photo"></div>
+            </div>
+            <div>
+              <h2>AI Engineer in Progress</h2>
+              <small>Computer Vision • XR/VR • Robotics • Systems</small>
+              <div class="hero-card-tags">
+                <div class="chip">YOLOv8 · EfficientNet</div>
+                <div class="chip">Unity XR · C#</div>
+                <div class="chip">Arduino · Hardware</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-kpi-row">
+            <div class="kpi">
+              <strong>8+</strong>
+              <span>End to end AI and XR projects</span>
+            </div>
+            <div class="kpi">
+              <strong>2x</strong>
+              <span>First prizes in AI & XR</span>
+            </div>
+            <div class="kpi">
+              <strong>Hands on</strong>
+              <span>From models to robots</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="reveal">
+      <div class="section-header">
+        <div class="section-title">
+          <span></span> About Me
+        </div>
+        <div class="section-subtitle">
+          Who I am and what I like to build
+        </div>
+      </div>
+
+      <div class="card tilt-card">
+        <div class="about-grid">
+          <div>
+            <p>
+              I am a B.Tech student in Artificial Intelligence in Agriculture, focused on applying
+              AI, computer vision and XR to real world problems in agriculture and smart systems.
+            </p>
+            <p style="margin-top: 8px;">
+              I like building full pipelines: collecting and preparing data, training models,
+              evaluating them, and then wiring them into usable tools, interfaces or hardware.
+            </p>
+            <ul class="about-points" style="margin-top: 10px;">
+              <li>1st place - Kaggle Horse Survival prediction competition.</li>
+              <li>1st prize - Jio Tesseract XR bootcamp mini VR game.</li>
+              <li>Completed NVIDIA DLI training in Deep Learning / Computer Vision.</li>
+              <li>Projects across agriculture, traffic, cattle, search algorithms and chatbots.</li>
+            </ul>
+          </div>
+          <div>
+            <p>
+              Recently, I have been building:
+            </p>
+            <ul class="about-points" style="margin-top: 6px;">
+              <li>YOLO-based cattle and traffic systems that work on real video feeds.</li>
+              <li>XR experiences in Unity for learning and visualization.</li>
+              <li>Search algorithm visualizers to internalize AI fundamentals.</li>
+              <li>Applied ML for agriculture and animal health datasets.</li>
+            </ul>
+            <div class="about-tags">
+              <div class="chip">AI in Agriculture</div>
+              <div class="chip">Real time CV</div>
+              <div class="chip">Unity & VR</div>
+              <div class="chip">Robotics & Arduino</div>
+              <div class="chip">End to end systems</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills with animated rows -->
+    <section id="skills" class="reveal">
+      <div class="section-header">
+        <div class="section-title">
+          <span></span> Skills
+        </div>
+        <div class="section-subtitle">
+          Tools I use to ship AI, CV, XR and robotics projects
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="skills-marquee">
+
+          <!-- Row 1 (moves left) -->
+          <div class="skills-row skills-row-left">
+            <div class="skills-row-inner">
+              <div class="skill-card tilt-card">
+                <div class="skill-card-header">
+                  <div class="skill-card-title">AI / ML</div>
+                  <div class="dot"></div>
+                </div>
+                <div class="skill-chip-row">
+                  <span>Python</span>
+                  <span>Scikit-learn</span>
+                  <span>Deep Learning basics</span>
+                  <span>Data preprocessing</span>
+                </div>
+              </div>
+
+              <div class="skill-card tilt-card">
+                <div class="skill-card-header">
+                  <div class="skill-card-title">Structured ML</div>
+                  <div class="dot"></div>
+                </div>
+                <div class="skill-chip-row">
+                  <span>Feature engineering</span>
+                  <span>Ensembles</span>
+                  <span>Model tuning</span>
+                </div>
+              </div>
+
+              <div class="skill-card tilt-card">
+                <div class="skill-card-header">
+                  <div class="skill-card-title">ML Practice</div>
+                  <div class="dot"></div>
+                </div>
+                <div class="skill-chip-row">
+                  <span>Notebooks</span>
+                  <span>Experiment tracking</span>
+                  <span>Data cleaning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2 (moves right) -->
+          <div class="skills-row skills-row-right">
+            <div class="skills-row-inner">
+              <div class="skill-card tilt-card">
+                <div class="skill-card-header">
+                  <div class="skill-card-title">Computer Vision</div>
+                  <div class="dot"></div>
+                </div>
+                <div class="skill-chip-row">
+                  <span>YOLOv8</span>
+                  <span>EfficientNet</span>
+                  <span>OpenCV</span>
+                  <span>Image pipelines</span>
+                </div>
+              </div>
+
+              <div class="skill-card tilt-card">
+                <div class="skill-card-header">
+                  <div class="skill-card-title">XR / VR & 3D</div>
+                  <div class="dot"></div>
+                </div>
+                <div class="skill-chip-row">
+                  <span>Unity</span>
+                  <span>C#</span>
+                  <span>VR interactions</span>
+                  <span>Basic Blender & SketchUp</span>
+                </div>
+              </div>
+
+              <div class="skill-card tilt-card">
+                <div class="skill-card-header">
+                  <div class="skill-card-title">Graphics & Media</div>
+                  <div class="dot"></div>
+                </div>
+                <div class="skill-chip-row">
+                  <span>Photoshop</span>
+                  <span>Basic design</span>
+                  <span>Video editing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3 (moves left) -->
+          <div class="skills-row skills-row-left">
+            <div class="skills-row-inner">
+              <div class="skill-card tilt-card">
+                <div class="skill-card-header">
+                  <div class="skill-card-title">Software & Web</div>
+                  <div class="dot"></div>
+                </div>
+                <div class="skill-chip-row">
+                  <span>C</span>
+                  <span>C++</span>
+                  <span>C#</span>
+                  <span>JavaScript</span>
+                  <span>HTML / CSS</span>
+                  <span>SQL</span>
+                </div>
+              </div>
+
+              <div class="skill-card tilt-card">
+                <div class="skill-card-header">
+                  <div class="skill-card-title">Hardware & Robotics</div>
+                  <div class="dot"></div>
+                </div>
+                <div class="skill-chip-row">
+                  <span>Arduino</span>
+                  <span>Sensor integration</span>
+                  <span>Motor control</span>
+                  <span>Prototyping</span>
+                </div>
+              </div>
+
+              <div class="skill-card tilt-card">
+                <div class="skill-card-header">
+                  <div class="skill-card-title">Workflow</div>
+                  <div class="dot"></div>
+                </div>
+                <div class="skill-chip-row">
+                  <span>Git & GitHub</span>
+                  <span>VS Code</span>
+                  <span>Project organization</span>
+                  <span>Basic UI/UX sense</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-note">
+            Hover a row to pause its motion. Others keep moving.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="reveal">
+      <div class="section-header">
+        <div class="section-title">
+          <span></span> Projects
+        </div>
+        <div class="section-subtitle">
+          Selected work in AI, CV, XR, and intelligent systems
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card tilt-card">
+          <div class="project-tag-featured">Featured</div>
+          <div class="project-title">Cattle Detection & Breed Classification</div>
+          <div class="project-desc">
+            YOLOv8 based cattle detection with EfficientNet-V2S breed classification for Indian bovine datasets.
+          </div>
+          <div class="project-meta">
+            <span class="pill-soft">YOLOv8</span>
+            <span class="pill-soft">EfficientNet-V2S</span>
+            <span class="pill-soft">Computer Vision</span>
+          </div>
+          <div class="project-footer">
+            <a class="project-link"
+               href="https://github.com/arnav12saxena/cattle-detection-classification"
+               target="_blank" rel="noopener noreferrer">
+              View on GitHub →
+            </a>
+            <span>Real world livestock use case</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card">
+          <div class="project-tag-featured">Featured</div>
+          <div class="project-title">Smart Traffic System with YOLO & Arduino</div>
+          <div class="project-desc">
+            Real time traffic density detection using YOLO, connected to Arduino for automatic signal timing control.
+          </div>
+          <div class="project-meta">
+            <span class="pill-soft">YOLO</span>
+            <span class="pill-soft">Python</span>
+            <span class="pill-soft">Arduino</span>
+            <span class="pill-soft">IoT</span>
+          </div>
+          <div class="project-footer">
+            <a class="project-link"
+               href="https://github.com/arnav12saxena/smart-traffic-yolo-arduino"
+               target="_blank" rel="noopener noreferrer">
+              View on GitHub →
+            </a>
+            <span>Smart city application</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card">
+          <div class="project-tag-featured">Kaggle 1st</div>
+          <div class="project-title">Horse Survival Prediction - Kaggle</div>
+          <div class="project-desc">
+            Built an ensemble pipeline for horse survival prediction with strong feature engineering and model stacking.
+          </div>
+          <div class="project-meta">
+            <span class="pill-soft">Kaggle</span>
+            <span class="pill-soft">Ensembles</span>
+            <span class="pill-soft">ML Ops basics</span>
+          </div>
+          <div class="project-footer">
+            <a class="project-link"
+               href="https://github.com/arnav12saxena/horse-survival"
+               target="_blank" rel="noopener noreferrer">
+              View on GitHub →
+            </a>
+            <span>Top score in class</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card">
+          <div class="project-title">Apple Disease Detection</div>
+          <div class="project-desc">
+            Image based disease detection for apple leaves, focusing on agricultural decision support using CV models.
+          </div>
+          <div class="project-meta">
+            <span class="pill-soft">Computer Vision</span>
+            <span class="pill-soft">CNN</span>
+            <span class="pill-soft">Agriculture AI</span>
+          </div>
+          <div class="project-footer">
+            <a class="project-link"
+               href="https://github.com/arnav12saxena"
+               target="_blank" rel="noopener noreferrer">
+              Repo link (WIP) →
+            </a>
+            <span>AI in agriculture</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card">
+          <div class="project-title">XR / VR Mini Game - Jio Tesseract</div>
+          <div class="project-desc">
+            Built an interactive mini VR experience in Unity during a 2 day XR bootcamp, awarded first prize.
+          </div>
+          <div class="project-meta">
+            <span class="pill-soft">Unity</span>
+            <span class="pill-soft">C#</span>
+            <span class="pill-soft">VR</span>
+          </div>
+          <div class="project-footer">
+            <a class="project-link"
+               href="https://github.com/arnav12saxena"
+               target="_blank" rel="noopener noreferrer">
+              Demo & code (soon) →
+            </a>
+            <span>Immersive learning</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card">
+          <div class="project-title">NVIDIA DLI Computer Vision Project</div>
+          <div class="project-desc">
+            Completed NVIDIA Deep Learning Institute training and built CV models with GPU accelerated workflows.
+          </div>
+          <div class="project-meta">
+            <span class="pill-soft">NVIDIA DLI</span>
+            <span class="pill-soft">Deep Learning</span>
+            <span class="pill-soft">Vision</span>
+          </div>
+          <div class="project-footer">
+            <a class="project-link"
+               href="https://github.com/arnav12saxena"
+               target="_blank" rel="noopener noreferrer">
+              Notes & code →
+            </a>
+            <span>Certified</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card">
+          <div class="project-title">StudyMate - Desktop Chatbot</div>
+          <div class="project-desc">
+            A desktop based chatbot application packaged as an executable, built to assist with semester subjects.
+          </div>
+          <div class="project-meta">
+            <span class="pill-soft">Python</span>
+            <span class="pill-soft">GUI</span>
+            <span class="pill-soft">PyInstaller</span>
+          </div>
+          <div class="project-footer">
+            <a class="project-link"
+               href="https://github.com/arnav12saxena"
+               target="_blank" rel="noopener noreferrer">
+              View on GitHub →
+            </a>
+            <span>Student tool</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card">
+          <div class="project-title">AI Search Algorithms Visualizer</div>
+          <div class="project-desc">
+            Implementation and visualization of classical AI search algorithms like BFS, DFS and A* for learning.
+          </div>
+          <div class="project-meta">
+            <span class="pill-soft">Algorithms</span>
+            <span class="pill-soft">C++ / Python</span>
+            <span class="pill-soft">Education</span>
+          </div>
+          <div class="project-footer">
+            <a class="project-link"
+               href="https://github.com/arnav12saxena"
+               target="_blank" rel="noopener noreferrer">
+              View on GitHub →
+            </a>
+            <span>Core AI fundamentals</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Blog preview -->
+    <section id="blog" class="reveal">
+      <div class="section-header">
+        <div class="section-title">
+          <span></span> Blog
+        </div>
+        <div class="section-subtitle">
+          Short write-ups on projects, experiments and lessons
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="blog-grid">
+          <article class="blog-card tilt-card">
+            <div class="blog-tag">Computer Vision</div>
+            <h3 class="blog-title">How I built my YOLO-based traffic system</h3>
+            <p class="blog-excerpt">
+              A breakdown of the smart traffic project: dataset, YOLO training, detection pipeline,
+              and how I connected it with Arduino for real-time signal control.
+            </p>
+            <a href="blog.html#traffic-yolo" class="blog-link">Read post →</a>
+          </article>
+
+          <article class="blog-card tilt-card">
+            <div class="blog-tag">Kaggle</div>
+            <h3 class="blog-title">Winning Horse Survival: my ML pipeline</h3>
+            <p class="blog-excerpt">
+              How I approached the horse survival competition: feature cleaning, handling missing values,
+              model selection and final ensemble to reach the top score.
+            </p>
+            <a href="blog.html#horse-kaggle" class="blog-link">Read post →</a>
+          </article>
+
+          <article class="blog-card tilt-card">
+            <div class="blog-tag">XR / VR</div>
+            <h3 class="blog-title">Building a VR mini game in 2 days</h3>
+            <p class="blog-excerpt">
+              Notes from the Jio Tesseract XR bootcamp: idea selection, Unity scene setup, interaction design
+              and what helped me get first prize.
+            </p>
+            <a href="blog.html#xr-bootcamp" class="blog-link">Read post →</a>
+          </article>
+        </div>
+
+        <div class="blog-footer-link">
+          <a href="blog.html" class="project-link">View all posts →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="reveal">
+      <div class="section-header">
+        <div class="section-title">
+          <span></span> Achievements
+        </div>
+        <div class="section-subtitle">
+          Signals that I can learn fast, build and ship
+        </div>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card tilt-card">
+          <div class="achievement-title">
+            <span>🏆</span> Kaggle Horse Survival - 1st Place
+          </div>
+          <div class="achievement-meta">
+            Built and tuned an ensemble ML pipeline for a structured medical dataset,
+            achieving the top score in the class competition.
+          </div>
+        </div>
+
+        <div class="achievement-card tilt-card">
+          <div class="achievement-title">
+            <span>🥇</span> Jio Tesseract XR - 1st Prize
+          </div>
+          <div class="achievement-meta">
+            Awarded first prize for a Unity based VR mini game during a 2 day XR bootcamp,
+            focusing on interaction design and experience.
+          </div>
+        </div>
+
+        <div class="achievement-card tilt-card">
+          <div class="achievement-title">
+            <span>🎓</span> NVIDIA DLI Certificate
+          </div>
+          <div class="achievement-meta">
+            Completed NVIDIA Deep Learning Institute training on computer vision
+            and deep learning workflows using GPUs.
+          </div>
+        </div>
+
+        <div class="achievement-card tilt-card">
+          <div class="achievement-title">
+            <span>📚</span> Multiple AI and CV Projects
+          </div>
+          <div class="achievement-meta">
+            From cattle and crop disease detection to smart traffic and search algorithm visualizers,
+            I try to cover both applied and core AI.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume preview -->
+    <section class="reveal">
+      <div class="section-header">
+        <div class="section-title">
+          <span></span> Resume
+        </div>
+        <div class="section-subtitle">
+          Quick access to my CV and a full inline viewer
+        </div>
+      </div>
+
+      <div class="card resume-card tilt-card">
+        <div class="resume-card-text">
+          <p>
+            You can download my latest resume directly or open a separate page
+            with an inline viewer that uses the Google Drive preview.
+          </p>
+          <div class="hero-actions" style="margin-top: 10px;">
+            <a href="https://drive.google.com/file/d/1B2PXQ4uVKDv4XlHuxRXyEaxoWZExL_yU/view?usp=drive_link"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-primary">
+              ⬇ Download PDF
+            </a>
+            <a href="resume.html" class="btn btn-ghost">
+              Open resume viewer
+            </a>
+          </div>
+        </div>
+        <div class="resume-card-preview">
+          <div class="resume-mini-frame">
+            <div class="resume-mini-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="resume-mini-body">
+              Resume preview is available on a separate page.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="reveal">
+      <div class="section-header">
+        <div class="section-title">
+          <span></span> Contact
+        </div>
+        <div class="section-subtitle">
+          Reach out for internships, collaborations, or projects
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="contact-layout">
+          <div>
+            <p>
+              I am looking for opportunities where I can work on applied AI, computer vision,
+              XR or robotics projects, especially ones that touch real users or real world systems.
+            </p>
+            <div class="contact-row">
+              <div>
+                <div class="contact-label">Email</div>
+                <a href="mailto:arnav12saxena@gmail.com"
+                   style="color: var(--accent-strong); text-decoration: none;">
+                  arnav12saxena@gmail.com
+                </a>
+              </div>
+              <div>
+                <div class="contact-label">LinkedIn</div>
+                <a href="https://www.linkedin.com/in/arnav-saxena-39113a3a0"
+                   target="_blank" rel="noopener noreferrer"
+                   style="color: var(--accent-strong); text-decoration: none;">
+                  LinkedIn profile
+                </a>
+              </div>
+              <div>
+                <div class="contact-label">GitHub</div>
+                <a href="https://github.com/arnav12saxena"
+                   target="_blank" rel="noopener noreferrer"
+                   style="color: var(--accent-strong); text-decoration: none;">
+                  github.com/arnav12saxena
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <form class="contact-form"
+                  onsubmit="event.preventDefault(); alert('This is a front end demo. Connect this form to a backend or email service to make it functional.');">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" rows="3" placeholder="Tell me about the project or role."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: fit-content;">
+                Send message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> <strong>Arnav Saxena</strong>. All rights reserved.</span>
+      <span>Built with AI, CV, XR and a bit of glass.</span>
+    </footer>
+  </div>
+
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

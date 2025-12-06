@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog - Arnav Saxena</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog posts by Arnav Saxena on AI, Computer Vision, XR and projects." />
+
+  <link rel="icon" type="image/svg+xml"
+        href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="%234fd1ff" offset="0"/><stop stop-color="%237c5cff" offset="1"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="%23050816"/><circle cx="32" cy="32" r="20" fill="url(%23g)"/><text x="32" y="38" text-anchor="middle" font-size="22" fill="%23020816" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif">A</text></svg>' />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="loading.css" />
+</head>
+<body class="theme-dark">
+  <div id="loader" class="loader-overlay">
+    <div class="loader-inner">
+      <div class="loader-orb"></div>
+      <div class="loader-text">Loading blog…</div>
+    </div>
+  </div>
+
+  <canvas id="bgParticles"></canvas>
+  <div class="grid-bg"></div>
+  <div class="noise-overlay"></div>
+
+  <header>
+    <div class="nav-bar">
+      <div class="logo">
+        <div class="logo-badge">A</div>
+        <div>
+          <div class="logo-text-main">Arnav Saxena</div>
+          <div class="logo-text-sub">Blog</div>
+        </div>
+      </div>
+
+      <a href="index.html#blog" class="btn btn-ghost">← Back to portfolio</a>
+
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="theme-icon theme-icon-dark">🌙</span>
+        <span class="theme-icon theme-icon-light">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <section class="reveal">
+      <div class="section-header">
+        <div class="section-title">
+          <span></span> Blog
+        </div>
+        <div class="section-subtitle">
+          Short write-ups on how I build and think about my projects
+        </div>
+      </div>
+
+      <div class="card">
+        <article id="traffic-yolo" class="blog-post">
+          <div class="blog-tag">Computer Vision · Traffic</div>
+          <h2 class="blog-title">How I built my YOLO-based smart traffic system</h2>
+          <p class="blog-excerpt">
+            This project connects real time object detection with physical traffic signals.
+          </p>
+          <p class="blog-body">
+            I started with the goal of using a camera feed to automatically adjust signal timing based on
+            traffic density. The pipeline was:
+          </p>
+          <ul class="about-points" style="margin-top: 6px;">
+            <li>Collect sample traffic footage from intersections with different densities.</li>
+            <li>Use YOLO to detect vehicles in each frame and count them per lane.</li>
+            <li>Aggregate counts over a short window to estimate density levels.</li>
+            <li>Send commands to an Arduino board which controls LEDs representing signal lights.</li>
+          </ul>
+          <p class="blog-body" style="margin-top: 6px;">
+            The most interesting part was tuning the thresholds so that the signal does not flicker too often, and
+            building a simple protocol between Python and Arduino that is reliable even if frames drop.
+          </p>
+        </article>
+
+        <hr style="margin: 16px 0; border: none; border-top: 1px solid rgba(148, 163, 184, 0.4);" />
+
+        <article id="horse-kaggle" class="blog-post">
+          <div class="blog-tag">Kaggle · ML</div>
+          <h2 class="blog-title">Horse survival prediction: my winning pipeline</h2>
+          <p class="blog-excerpt">
+            A structured dataset, medical style fields, and a lot of missing data.
+          </p>
+          <p class="blog-body">
+            The competition was about predicting the survival of horses based on clinical measurements.
+            What worked well:
+          </p>
+          <ul class="about-points" style="margin-top: 6px;">
+            <li>Systematic handling of missing values instead of dropping rows.</li>
+            <li>Target-aware encoding for some categorical fields.</li>
+            <li>Trying multiple models and using an ensemble instead of trusting a single one.</li>
+            <li>Repeated stratified K-fold cross validation to get stable estimates.</li>
+          </ul>
+          <p class="blog-body" style="margin-top: 6px;">
+            The key takeaway for me was that for structured data, feature engineering and validation strategy matter
+            more than chasing the fanciest model.
+          </p>
+        </article>
+
+        <hr style="margin: 16px 0; border: none; border-top: 1px solid rgba(148, 163, 184, 0.4);" />
+
+        <article id="xr-bootcamp" class="blog-post">
+          <div class="blog-tag">XR / VR</div>
+          <h2 class="blog-title">Building a VR mini game in two days</h2>
+          <p class="blog-excerpt">
+            Notes from the Jio Tesseract XR bootcamp that ended with a first prize.
+          </p>
+          <p class="blog-body">
+            With limited time, I focused on a simple but polished concept instead of trying to implement
+            complex mechanics. The main pieces were:
+          </p>
+          <ul class="about-points" style="margin-top: 6px;">
+            <li>Designing a small environment that feels coherent and not empty.</li>
+            <li>Making sure core interactions (grab, teleport, trigger) are smooth.</li>
+            <li>Adding small feedback elements like sound and haptics.</li>
+          </ul>
+          <p class="blog-body" style="margin-top: 6px;">
+            This project made me realize that for XR experiences, comfort, clarity and feedback are more important
+            than raw feature count.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> <strong>Arnav Saxena</strong>. All rights reserved.</span>
+      <span>Blog · AI · CV · XR</span>
+    </footer>
+  </div>
+
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
