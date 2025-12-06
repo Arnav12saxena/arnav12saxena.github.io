@@ -697,11 +697,11 @@ body.theme-light .skill-pill {
 }
 
 .skills-row-left .skills-row-inner {
-  animation: marquee-left 22s linear infinite;
+  animation: marquee-left 45s linear infinite;
 }
 
 .skills-row-right .skills-row-inner {
-  animation: marquee-right 24s linear infinite;
+  animation: marquee-right 45s linear infinite;
 }
 
 /* Pause row on hover only for that row */
@@ -781,11 +781,10 @@ body.theme-light .pill-soft {
 }
 
 .project-footer {
-  margin-top: 8px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  font-size: 10px;
+  gap: 8px;
 }
 
 .project-link {
@@ -1147,4 +1146,10 @@ body.theme-light .hero-highlight {
 .skills-row-inner .skill-card {
   min-width: 160px;
   max-width: 160px;
+}
+
+header, nav {
+  position: sticky !important;
+  top: 0;
+  z-index: 9999 !important;
 }
