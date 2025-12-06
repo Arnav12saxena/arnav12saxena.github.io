@@ -671,8 +671,8 @@
             </div>
           </div>
           <div>
-            <form class="contact-form"
-                  onsubmit="event.preventDefault(); alert('This is a front end demo. Connect this form to a backend or email service to make it functional.');">
+            <form class="contact-form" onsubmit="return validateContactForm(event);">
+
               <div class="field">
                 <label for="name">Name</label>
                 <input id="name" type="text" placeholder="Your name" />
@@ -704,4 +704,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
