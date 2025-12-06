@@ -675,7 +675,7 @@
       </div>
     </section>
 
-    <!-- Contact -->
+        <!-- Contact -->
     <section id="contact" class="reveal">
       <div class="section-header">
         <div class="section-title">
@@ -693,55 +693,94 @@
               I am looking for opportunities where I can work on applied AI, computer vision,
               XR or robotics projects, especially ones that touch real users or real world systems.
             </p>
+
             <div class="contact-row">
               <div>
                 <div class="contact-label">Email</div>
-                <a href="mailto:arnav12saxena@gmail.com"
-                   style="color: var(--accent-strong); text-decoration: none;">
+                <a
+                  href="mailto:arnav12saxena@gmail.com"
+                  style="color: var(--accent-strong); text-decoration: none;"
+                >
                   arnav12saxena@gmail.com
                 </a>
               </div>
+
               <div>
                 <div class="contact-label">LinkedIn</div>
-                <a href="https://www.linkedin.com/in/arnav-saxena-39113a3a0"
-                   target="_blank" rel="noopener noreferrer"
-                   style="color: var(--accent-strong); text-decoration: none;">
+                <a
+                  href="https://www.linkedin.com/in/arnav-saxena-39113a3a0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="color: var(--accent-strong); text-decoration: none;"
+                >
                   LinkedIn profile
                 </a>
               </div>
+
               <div>
                 <div class="contact-label">GitHub</div>
-                <a href="https://github.com/arnav12saxena"
-                   target="_blank" rel="noopener noreferrer"
-                   style="color: var(--accent-strong); text-decoration: none;">
+                <a
+                  href="https://github.com/arnav12saxena"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="color: var(--accent-strong); text-decoration: none;"
+                >
                   github.com/arnav12saxena
                 </a>
               </div>
             </div>
           </div>
+
           <div>
             <form class="contact-form" onsubmit="return validateContactForm(event);">
-
               <div class="field">
                 <label for="name">Name</label>
                 <input id="name" type="text" placeholder="Your name" />
               </div>
+
               <div class="field">
                 <label for="email">Email</label>
                 <input id="email" type="email" placeholder="you@example.com" />
               </div>
+
               <div class="field">
                 <label for="message">Message</label>
-                <textarea id="message" rows="3" placeholder="Tell me about the project or role."></textarea>
+                <textarea
+                  id="message"
+                  rows="3"
+                  placeholder="Tell me about the project or role."
+                ></textarea>
               </div>
+
               <button type="submit" class="btn btn-primary" style="width: fit-content;">
                 Send message
               </button>
             </form>
           </div>
         </div>
+
+        <!-- LinkedIn badge placed AFTER the 2-column grid -->
+        <div class="linkedin-badge-wrapper">
+          <div
+            class="badge-base LI-profile-badge"
+            data-locale="en_US"
+            data-size="medium"
+            data-theme="dark"
+            data-type="VERTICAL"
+            data-vanity="arnav-saxena-39113a3a0"
+            data-version="v1"
+          >
+            <a
+              class="badge-base__link LI-simple-link"
+              href="https://www.linkedin.com/in/arnav-saxena-39113a3a0"
+            >
+              Arnav Saxena
+            </a>
+          </div>
+        </div>
       </div>
     </section>
+
 
     <footer>
       <span>© <span id="year"></span> <strong>Arnav Saxena</strong>. All rights reserved.</span>
@@ -751,8 +790,10 @@
 
   <script src="particles.js"></script>
   <script src="script.js?v=3"></script>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 </html>
+
 
 
 
