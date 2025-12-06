@@ -13,22 +13,21 @@ const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
 function setActiveLink() {
-  let current = "";
-  const top = window.scrollY;
+  if (!sections.length || !navLinks.length) return;
+  let current = sections[0].getAttribute("id");
+  const midScreen = window.scrollY + window.innerHeight / 3;
 
   sections.forEach((section) => {
-    const offset = section.offsetTop - 120;
+    const offset = section.offsetTop;
     const height = section.offsetHeight;
-    if (top >= offset && top < offset + height) {
+    if (midScreen >= offset && midScreen < offset + height) {
       current = section.getAttribute("id");
     }
   });
 
   navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
+    const target = link.getAttribute("href") || "";
+    link.classList.toggle("active", target === "#" + current);
   });
 }
 
@@ -85,15 +84,12 @@ if (themeToggle) {
   });
 }
 
-// Tilt direction randomization for cards
+// Tilt direction randomization for clickable cards
 function assignRandomTilt() {
   const tiltCards = document.querySelectorAll(".tilt-card");
   tiltCards.forEach((card, index) => {
-    // alternate a bit but keep some variation
     const direction = Math.random() > 0.5 ? "left" : "right";
     card.setAttribute("data-tilt", direction);
-
-    // subtle staggered animation on load
     card.style.transitionDelay = (index * 0.02).toFixed(2) + "s";
   });
 }
@@ -106,14 +102,12 @@ function hideLoader() {
 }
 
 window.addEventListener("load", () => {
-  // Small timeout for smoother effect
   setTimeout(hideLoader, 600);
 
-  // Init particles
   if (window.initParticles) {
     window.initParticles("bgParticles");
   }
 
-  // Assign tilt
   assignRandomTilt();
+  setActiveLink();
 });
