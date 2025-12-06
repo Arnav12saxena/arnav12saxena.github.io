@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 1000;
   transition: opacity 0.45s ease-out, visibility 0.45s ease-out;
 }
 
@@ -63,3 +63,4 @@
       0 0 10px rgba(124, 92, 255, 0.6);
   }
 }
+
