@@ -788,29 +788,13 @@ body.theme-light .pill-soft {
   font-size: 10px;
 }
 
-.project-footer span {
-  .project-link::after {
-  white-space: nowrap;
-  font-family: inherit;
-  font-size: 10px;
-  color: var(--text-muted);
-  white-space: nowrap;
-}
-
 .project-link {
-  color: var(--accent-strong) !important;
+  text-decoration: none;
   font-size: 11px;
-  font-weight: 500;
-  text-decoration: none !important;
+  color: var(--accent-strong);
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.project-link:visited {
-  color: var(--accent-strong) !important;
 }
 
 /* Achievements */
@@ -1171,4 +1155,5 @@ header {
   z-index: 50;
   pointer-events: auto;
 }
+
 
