@@ -161,22 +161,3 @@ window.addEventListener("load", () => {
   // Re-enable scroll when loading is done
   document.body.classList.remove("loading");
 });
-
-// Mobile menu toggle
-const navToggle = document.getElementById("navToggle");
-const navList = document.getElementById("navList");
-
-navToggle.addEventListener("click", () => {
-  navList.classList.toggle("open");
-});
-
-// Close menu after clicking a link (mobile)
-document.querySelectorAll("#navList .nav-link").forEach(link => {
-  link.addEventListener("click", () => {
-    if (window.innerWidth <= 768) {
-      navList.classList.remove("open");
-    }
-  });
-});
-
-
