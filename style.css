@@ -1256,3 +1256,36 @@ a:focus-visible {
   box-shadow: 0 0 8px var(--accent-strong);
   border-radius: 12px;
 }
+
+/* Remove unwanted background/border behind desktop nav links */
+.nav-bar nav ul {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.nav-bar nav ul li {
+  background: none !important;
+  border: none !important;
+}
+
+.nav-bar nav ul li a {
+  background: none !important;
+}
+/* Remove browser default blue outline */
+*:focus {
+  outline: none !important;
+}
+*:focus-visible {
+  outline: none !important;
+}
+a, button {
+  outline: none !important;
+}
+/* Professional soft glow on focus */
+button:focus-visible,
+a:focus-visible {
+  box-shadow: 0 0 14px rgba(79, 209, 255, 0.5);
+  border-radius: 8px;
+  outline: none !important;
+}
