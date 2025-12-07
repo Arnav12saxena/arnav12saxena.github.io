@@ -1233,3 +1233,11 @@ body.theme-dark nav {
   background-color: var(--card-bg) !important;
   border: 1px solid var(--border-color);
 }
+
+/* Fix unwanted horizontal menu background on desktop */
+@media (min-width: 768px) {
+  nav ul#navList {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
