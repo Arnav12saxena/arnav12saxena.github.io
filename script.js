@@ -11,6 +11,14 @@ if (navToggle && navList) {
   });
 }
 
+// Auto-close mobile menu when clicking a link
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navList = document.getElementById('navList');
+    navList.classList.remove('open');
+  });
+});
+
 // Active nav link on scroll
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -144,3 +152,4 @@ window.addEventListener("load", () => {
   // Re-enable scroll when loading is done
   document.body.classList.remove("loading");
 });
+
