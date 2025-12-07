@@ -234,7 +234,6 @@ body.theme-light nav a.active {
 
 .nav-mobile-toggle {
   color: var(--accent-strong);
-  font-weight: 600;
 }
 
 body.theme-light .theme-toggle,
@@ -1179,4 +1178,5 @@ body.theme-light .meta-row {
     gap: 4px;
   }
 }
+
 
