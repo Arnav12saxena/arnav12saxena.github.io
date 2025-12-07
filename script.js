@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loader");
+  if (loader) loader.style.opacity = 0;
+
+  setTimeout(() => {
+    if (loader) loader.style.display = "none";
+  }, 400);
+});
+
 // Disable scroll while loading
 document.body.classList.add("loading");
 
@@ -169,4 +178,5 @@ document.querySelectorAll("#navList .nav-link").forEach(link => {
     }
   });
 });
+
 
