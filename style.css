@@ -1211,3 +1211,25 @@ body.theme-dark .badge-dark {
 body.theme-dark .badge-light {
   display: none;
 }
+
+/* Mobile menu background in light mode */
+body.theme-light nav {
+  background-color: #ffffff !important;
+}
+
+/* Mobile nav links in light mode */
+body.theme-light nav a {
+  color: #111 !important;
+}
+
+/* Dark mode */
+body.theme-dark nav {
+  background-color: #0b0e14 !important;
+}
+
+/* Fix menu button text in both modes */
+.nav-mobile-toggle {
+  color: var(--accent-strong) !important;
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color);
+}
