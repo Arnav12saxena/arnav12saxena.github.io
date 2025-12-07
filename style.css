@@ -1241,3 +1241,18 @@ body.theme-dark nav {
     box-shadow: none !important;
   }
 }
+
+/* Remove focus outline box from all buttons & links */
+button:focus,
+a:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Smooth focus highlight instead of ugly blue rectangle */
+button:focus-visible,
+a:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 8px var(--accent-strong);
+  border-radius: 12px;
+}
