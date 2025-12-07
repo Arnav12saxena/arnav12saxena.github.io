@@ -1289,3 +1289,43 @@ a:focus-visible {
   border-radius: 8px;
   outline: none !important;
 }
+
+/* FORCE desktop nav to behave clean and remove mobile styles */
+@media (min-width: 768px) {
+  .nav-bar nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .nav-bar nav ul li {
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 12px !important;
+    border: none !important;
+  }
+
+  .nav-bar nav ul li a {
+    background: none !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Hide mobile menu button on large screens */
+  #navToggle {
+    display: none !important;
+  }
+}
+
+/* Remove browser focus border completely */
+button:focus,
+a:focus,
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
