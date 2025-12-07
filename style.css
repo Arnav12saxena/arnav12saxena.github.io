@@ -1242,13 +1242,6 @@ body.theme-dark nav {
   }
 }
 
-/* Remove focus outline box from all buttons & links */
-button:focus,
-a:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
 /* Smooth focus highlight instead of ugly blue rectangle */
 button:focus-visible,
 a:focus-visible {
@@ -1322,77 +1315,10 @@ a:focus-visible {
   }
 }
 
-/* Remove browser focus border completely */
-button:focus,
-a:focus,
-*:focus-visible {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* MOBILE: dropdown menu background restored */
-@media (max-width: 768px) {
-  #navList {
-    background: var(--card-bg) !important;
-    padding: 16px 20px !important;
-    border-radius: 12px;
-    display: none;
-  }
-
-  .nav-mobile-active #navList {
-    display: block !important;
-  }
-}
-/* DESKTOP: force clean horizontal menu */
-@media (min-width: 769px) {
-  #navList {
-    display: flex !important;
-    flex-direction: row !important;
-    background: transparent !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
-  }
-
-  #navList li {
-    background: transparent !important;
-    padding: 0 !important;
-    margin: 0 14px !important;
-    border: none !important;
-  }
-
-  #navList li a {
-    background: transparent !important;
-    padding: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-
-  /* hide burger button on desktop */
-  #navToggle {
-    display: none !important;
-  }
-}
-/* Remove browser default focus outline on buttons/links */
-button:focus,
-a:focus,
-button:focus-visible,
-a:focus-visible {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
 /* -------------------- */
 /* FIX NAVIGATION SYSTEM */
 /* -------------------- */
 
-/* Remove the ugly horizontal box */
-.nav-bar nav,
-.nav-container {
-  background: transparent !important;
-  box-shadow: none !important;
-}
 
 /* Desktop nav */
 #navList {
@@ -1443,3 +1369,4 @@ a:focus-visible {
   font-weight: 600;
   cursor: pointer;
 }
+
