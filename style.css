@@ -1,3 +1,26 @@
+/* Remove browser default blue outline */
+*:focus {
+  outline: none !important;
+}
+
+*:focus-visible {
+  outline: none !important;
+}
+
+/* Professional soft glow on focus for interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  box-shadow: 0 0 0 3px rgba(79, 209, 255, 0.4);
+  outline: none !important;
+}
+
+/* Special handling for buttons with existing shadows */
+.btn-primary:focus-visible {
+  box-shadow: 0 14px 35px rgba(79, 209, 255, 0.55), 0 0 0 3px rgba(79, 209, 255, 0.5);
+}
+
 /* Force background layers behind content */
 #bgParticles, .noise-overlay, .grid-bg {
   pointer-events: none !important;
@@ -298,14 +321,6 @@ body.theme-light .theme-icon-light {
     text-align: left;
     padding: 8px 12px;
   }
-}
-
-*:focus, *:focus-visible {
-  outline: none !important;
-}
-
-button:focus-visible, a:focus-visible {
-  box-shadow: 0 0 12px rgba(79, 209, 255, 0.3);
 }
 
 /* Hero */
@@ -1178,5 +1193,6 @@ body.theme-light .meta-row {
     gap: 4px;
   }
 }
+
 
 
