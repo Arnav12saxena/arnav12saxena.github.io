@@ -1227,12 +1227,6 @@ body.theme-dark nav {
   background-color: #0b0e14 !important;
 }
 
-/* Fix menu button text in both modes */
-.nav-mobile-toggle {
-  color: var(--accent-strong) !important;
-  background-color: var(--card-bg) !important;
-  border: 1px solid var(--border-color);
-}
 
 /* Fix unwanted horizontal menu background on desktop */
 @media (min-width: 768px) {
@@ -1352,15 +1346,6 @@ a:focus-visible {
   /* show menu */
   #navList.open {
     display: flex;
-  }
-
-  .nav-mobile-toggle {
-    color: var(--text-primary);
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 15px;
   }
 }
 
