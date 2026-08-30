@@ -48,6 +48,7 @@
         <ul id="navList">
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#research" class="nav-link">Research</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#blog" class="nav-link">Blog</a></li>
@@ -69,20 +70,18 @@
     <!-- Hero -->
     <section id="home" class="hero reveal">
       <div>
-        <div class="pill">
-          <div class="pill-dot">◎</div>
-          Open to AI/ML, CV, XR and Robotics internships
-        </div>
         <h1 class="hero-title">
           Hi, I am <span class="hero-highlight">Arnav Saxena</span>
         </h1>
         <div class="hero-tagline">
-          AI/ML & Computer Vision Developer | XR/VR | Robotics
+          B.Tech AI student building Computer Vision, XR and Robotics projects
         </div>
         <p class="hero-text">
-          I build end-to-end applied AI systems: from computer vision models and intelligent agents
-          to XR experiences and robotics prototypes. I like taking ideas from notebook to hardware
-          and making them work in the real world.
+          I'm a B.Tech AI in Agriculture student, currently in my 3rd year at IIT Mandi.
+          My recent work includes a YOLOv8 + EfficientNet cattle breed classifier, a smart traffic
+          system that talks to an Arduino, and a couple of Unity XR builds. I've also co-authored
+          two published papers on AI in agriculture. Most of what I build starts as a notebook
+          experiment and ends up running on actual hardware or a live server.
         </p>
 
         <div class="hero-badges">
@@ -150,7 +149,7 @@
           </div>
           <div class="hero-kpi-row">
             <div class="kpi">
-              <strong>8+</strong>
+              <strong>10+</strong>
               <span>End to end AI and XR projects</span>
             </div>
             <div class="kpi">
@@ -211,6 +210,72 @@
               <div class="chip">Unity & VR</div>
               <div class="chip">Robotics & Arduino</div>
               <div class="chip">End to end systems</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="reveal">
+      <div class="section-header">
+        <div class="section-title">
+          <span></span> Research & Publications
+        </div>
+        <div class="section-subtitle">
+          Published work at the intersection of AI and agriculture
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="research-list">
+          <div class="research-item">
+            <span class="research-status published">Published</span>
+            <div class="research-title">
+              Integrating Artificial Intelligence and Machine Learning for Sustainable Development
+              in Agriculture and Allied Sectors of the Temperate Himalayas
+            </div>
+            <div class="research-authors">Saxena, A.†, Faiq, M.†, Ghatrehsamani, S.*, Zahra, S.R.</div>
+            <div class="research-meta">
+              <span class="pill-soft">AgriEngineering, 8(1), 35 · 2026</span>
+              <a class="research-link" href="https://doi.org/10.3390/agriengineering8010035"
+                 target="_blank" rel="noopener noreferrer">View paper →</a>
+            </div>
+          </div>
+
+          <div class="research-item">
+            <span class="research-status published">Published</span>
+            <div class="research-title">
+              An Analytical Study on Indigenous and Crossbred Cow Breeds of Jammu and Kashmir and Ladakh
+            </div>
+            <div class="research-authors">Saxena, A.†, Tariq, N.†, Zahra, S.R.*, Alhameed, M.H.</div>
+            <div class="research-meta">
+              <span class="pill-soft">Indian Journal of Animal Research · 2026</span>
+              <a class="research-link" href="https://doi.org/10.18805/IJAR.B-5779"
+                 target="_blank" rel="noopener noreferrer">View paper →</a>
+            </div>
+          </div>
+
+          <div class="research-item">
+            <span class="research-status review">Under review</span>
+            <div class="research-title">
+              Parameter Efficient Vision Transformer Using Low-Rank Adaptation for Classification
+              of Indigenous Indian Buffalo Breeds
+            </div>
+            <div class="research-authors">Tariq, N., Saxena, A., Zahra, S.R.*, Alhameed, M.H.</div>
+            <div class="research-meta">
+              <span class="pill-soft">ViT + LoRA · ResNet-50 · EfficientNetV2-S</span>
+              <span class="pill-soft">83.53% accuracy, 5-fold cross-validation</span>
+            </div>
+          </div>
+
+          <div class="research-item">
+            <span class="research-status review">Under review</span>
+            <div class="research-title">
+              RFID and blockchain based traceability systems for livestock and supply chains
+            </div>
+            <div class="research-meta">
+              <span class="pill-soft">Manuscript under review</span>
             </div>
           </div>
         </div>
@@ -421,7 +486,7 @@
           </div>
           <div class="project-footer">
             <a class="project-link"
-               href="https://github.com/arnav12saxena/horse-survival"
+               href="https://github.com/Arnav12saxena/horse-survival-kaggle"
                target="_blank" rel="noopener noreferrer">
               View on GitHub →
             </a>
@@ -501,7 +566,7 @@
           </div>
           <div class="project-footer">
             <a class="project-link"
-               href="https://github.com/arnav12saxena"
+               href="https://github.com/Arnav12saxena/sem2-studymate-chatbot"
                target="_blank" rel="noopener noreferrer">
               View on GitHub →
             </a>
@@ -521,11 +586,54 @@
           </div>
           <div class="project-footer">
             <a class="project-link"
-               href="https://github.com/arnav12saxena"
+               href="https://github.com/Arnav12saxena/ai-search-algorithms"
                target="_blank" rel="noopener noreferrer">
               View on GitHub →
             </a>
             <span>Core AI fundamentals</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card">
+          <div class="project-tag-featured">Featured</div>
+          <div class="project-title">ARIA - Adaptive Research & Intelligence Assistant</div>
+          <div class="project-desc">
+            Personal research assistant app with a FastAPI backend, React frontend and ChromaDB memory,
+            running on Groq API and local Ollama models depending on hardware.
+          </div>
+          <div class="project-meta">
+            <span class="pill-soft">FastAPI</span>
+            <span class="pill-soft">React</span>
+            <span class="pill-soft">LLMs</span>
+          </div>
+          <div class="project-footer">
+            <a class="project-link"
+               href="https://github.com/Arnav12saxena/ARIA"
+               target="_blank" rel="noopener noreferrer">
+              View on GitHub →
+            </a>
+            <span>Ongoing project</span>
+          </div>
+        </article>
+
+        <article class="project-card tilt-card">
+          <div class="project-title">VCIA - Video Content Intelligence & Analysis</div>
+          <div class="project-desc">
+            Full-stack platform for automated scene detection and frame-level video analysis, built with
+            FastAPI and OpenCV on the backend and a Vite frontend, deployed on Render and Vercel.
+          </div>
+          <div class="project-meta">
+            <span class="pill-soft">FastAPI</span>
+            <span class="pill-soft">OpenCV</span>
+            <span class="pill-soft">Full-stack</span>
+          </div>
+          <div class="project-footer">
+            <a class="project-link"
+               href="https://github.com/Arnav12saxena/vcia"
+               target="_blank" rel="noopener noreferrer">
+              View on GitHub →
+            </a>
+            <span>Deployed</span>
           </div>
         </article>
       </div>
@@ -572,6 +680,25 @@
               and what helped me get first prize.
             </p>
             <a href="blog.html#xr-bootcamp" class="blog-link">Read post →</a>
+          </article>
+
+          <article class="blog-card tilt-card">
+            <div class="blog-tag">LLMs · Personal Tools</div>
+            <h3 class="blog-title">Building ARIA, my own research assistant</h3>
+            <p class="blog-excerpt">
+              How I built a FastAPI + React research assistant with long-term memory, and what running it
+              on both a hosted API and a local model taught me.
+            </p>
+            <a href="blog.html#aria" class="blog-link">Read post →</a>
+          </article>
+
+          <article class="blog-card tilt-card">
+            <div class="blog-tag">Computer Vision · Full-stack</div>
+            <h3 class="blog-title">Shipping VCIA: video scene analysis end to end</h3>
+            <p class="blog-excerpt">
+              Taking a video scene-detection idea past the notebook stage into a deployed app on Render and Vercel.
+            </p>
+            <a href="blog.html#vcia" class="blog-link">Read post →</a>
           </article>
         </div>
 
@@ -737,6 +864,30 @@
                   style="color: var(--accent-strong); text-decoration: none;"
                 >
                   github.com/arnav12saxena
+                </a>
+              </div>
+
+              <div>
+                <div class="contact-label">Kaggle</div>
+                <a
+                  href="https://www.kaggle.com/saxena11arnav"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="color: var(--accent-strong); text-decoration: none;"
+                >
+                  kaggle.com/saxena11arnav
+                </a>
+              </div>
+
+              <div>
+                <div class="contact-label">ORCID</div>
+                <a
+                  href="https://orcid.org/0009-0007-9845-8157"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="color: var(--accent-strong); text-decoration: none;"
+                >
+                  0009-0007-9845-8157
                 </a>
               </div>
             </div>
