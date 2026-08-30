@@ -127,6 +127,54 @@
             than raw feature count.
           </p>
         </article>
+        <hr style="margin: 16px 0; border: none; border-top: 1px solid rgba(148, 163, 184, 0.4);" />
+
+        <article id="aria" class="blog-post">
+          <div class="blog-tag">LLMs · Personal Tools</div>
+          <h2 class="blog-title">Building ARIA, my own research assistant</h2>
+          <p class="blog-excerpt">
+            A FastAPI + React app that remembers what I've been reading and working on.
+          </p>
+          <p class="blog-body">
+            ARIA (Adaptive Research and Intelligence Assistant) started as a way to stop losing track
+            of papers and notes across projects. The stack is straightforward:
+          </p>
+          <ul class="about-points" style="margin-top: 6px;">
+            <li>FastAPI backend handling requests and orchestration.</li>
+            <li>React frontend for chatting with it and browsing past sessions.</li>
+            <li>ChromaDB for long-term memory so it can recall earlier context.</li>
+            <li>Groq API on my laptop (GTX 1650), local Ollama/Mistral on a university PC with an RTX 4070.</li>
+          </ul>
+          <p class="blog-body" style="margin-top: 6px;">
+            Running it both ways forced me to think about latency and cost trade-offs between a hosted API
+            and a local model, which turned out to be a good excuse to actually learn how each one behaves
+            under real usage instead of just reading about it.
+          </p>
+        </article>
+
+        <hr style="margin: 16px 0; border: none; border-top: 1px solid rgba(148, 163, 184, 0.4);" />
+
+        <article id="vcia" class="blog-post">
+          <div class="blog-tag">Computer Vision · Full-stack</div>
+          <h2 class="blog-title">Shipping VCIA: video scene analysis end to end</h2>
+          <p class="blog-excerpt">
+            Taking a video analysis idea past the notebook stage and into a deployed app.
+          </p>
+          <p class="blog-body">
+            VCIA detects scene transitions and analyzes frame-level structure in uploaded videos. The part
+            that actually took the most time wasn't the OpenCV detection logic, it was getting the whole
+            thing deployed and talking to itself correctly:
+          </p>
+          <ul class="about-points" style="margin-top: 6px;">
+            <li>FastAPI + OpenCV backend on Render, pinned to Python 3.11 after some Pillow build failures.</li>
+            <li>Vite frontend on Vercel, wired to the backend through an environment variable.</li>
+            <li>Real-time progress tracking so uploads don't feel like they've stalled during analysis.</li>
+          </ul>
+          <p class="blog-body" style="margin-top: 6px;">
+            Debugging a deployment across two separate hosts taught me more about environment configuration
+            and CORS than any tutorial did. It's a working product now, not just a script that runs locally.
+          </p>
+        </article>
       </div>
     </section>
 
